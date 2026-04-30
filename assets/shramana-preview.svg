@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Shramana preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05070D"/>
+      <stop offset="0.55" stop-color="#081423"/>
+      <stop offset="1" stop-color="#101137"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="42%" r="48%">
+      <stop stop-color="#59F2C7" stop-opacity="0.48"/>
+      <stop offset="0.5" stop-color="#59F2C7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#59F2C7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="190" y1="80" x2="1000" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172031"/>
+      <stop offset="1" stop-color="#080D17"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#000" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#59F2C7" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.18" stroke="#D7E4FF" stroke-width="1">
+    <path d="M0 80H1200"/>
+    <path d="M0 122H1200"/>
+    <path d="M0 164H1200"/>
+    <path d="M0 206H1200"/>
+    <path d="M0 248H1200"/>
+    <path d="M0 290H1200"/>
+    <path d="M0 332H1200"/>
+    <path d="M0 374H1200"/>
+    <path d="M0 416H1200"/>
+    <path d="M0 458H1200"/>
+    <path d="M0 500H1200"/>
+    <path d="M0 542H1200"/>
+    <path d="M0 584H1200"/>
+    <path d="M60 0v630"/>
+    <path d="M122 0v630"/>
+    <path d="M184 0v630"/>
+    <path d="M246 0v630"/>
+    <path d="M308 0v630"/>
+    <path d="M370 0v630"/>
+    <path d="M432 0v630"/>
+    <path d="M494 0v630"/>
+    <path d="M556 0v630"/>
+    <path d="M618 0v630"/>
+    <path d="M680 0v630"/>
+    <path d="M742 0v630"/>
+    <path d="M804 0v630"/>
+    <path d="M866 0v630"/>
+    <path d="M928 0v630"/>
+    <path d="M990 0v630"/>
+    <path d="M1052 0v630"/>
+    <path d="M1114 0v630"/>
+    <path d="M1176 0v630"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="118" y="86" width="964" height="458" rx="28" fill="url(#panel)" stroke="#59F2C7" stroke-opacity="0.72" stroke-width="2"/>
+    <rect x="118" y="86" width="964" height="64" rx="28" fill="#151C2B" opacity="0.86"/>
+    <circle cx="154" cy="119" r="8" fill="#FF4F75"/>
+    <circle cx="184" cy="119" r="8" fill="#FFC84D"/>
+    <circle cx="214" cy="119" r="8" fill="#33D987"/>
+    <text x="164" y="245" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900" fill="#F7F4F0" letter-spacing="-2">Shramana</text>
+    <text x="166" y="306" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#AAB2C3">Creative / Custom3D</text>
+    <foreignObject x="166" y="336" width="430" height="118">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font: 500 30px/1.35 Inter, Arial, sans-serif; color: #D5DAE5;">A contemplative creative project site.</div>
+    </foreignObject>
+    <g transform="translate(680 202)">
+      <rect x="0" y="0" width="274" height="210" rx="22" fill="rgba(89, 242, 199, 0.28)" stroke="#59F2C7" stroke-width="3"/>
+      <path d="M36 158c48-111 112-162 202-153-8 91-67 148-180 174l-22-21Z" fill="#59F2C7" opacity="0.36"/>
+      <circle cx="137" cy="105" r="62" fill="none" stroke="#59F2C7" stroke-width="13"/>
+      <text x="137" y="130" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" fill="#F7F4F0">SH</text>
+    </g>
+    <g transform="translate(164 472)">
+      <rect width="158" height="36" rx="18" fill="#59F2C7" opacity="0.18" stroke="#59F2C7"/>
+      <text x="79" y="25" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#F7F4F0">Live Project</text>
+    </g>
+    <g transform="translate(728 462)" stroke="#59F2C7" stroke-width="8" stroke-linecap="round" opacity="0.82">
+      <path d="M0 0h260"/><path d="M0 34h190"/><path d="M0 68h226"/>
+    </g>
+  </g>
+</svg>

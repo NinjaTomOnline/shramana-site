@@ -1,0 +1,16 @@
+{
+  "name": "Shramana",
+  "tagline": "A contemplative creative project site.",
+  "category": "Creative / Custom3D",
+  "status": "Live",
+  "website": "https://ninjatomonline.github.io/shramana-site/",
+  "supportUrl": "",
+  "privacyUrl": "",
+  "appStoreUrl": "",
+  "icon": "https://raw.githubusercontent.com/NinjaTomOnline/shramana-site/main/assets/shramana-icon.svg",
+  "previewImage": "https://raw.githubusercontent.com/NinjaTomOnline/shramana-site/main/assets/shramana-preview.svg",
+  "previewImageAlt": "Shramana project preview",
+  "accent": "#59F2C7",
+  "featured": false,
+  "sortOrder": 320
+}
