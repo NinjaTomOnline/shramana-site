@@ -1,0 +1,9 @@
+{
+  "name": "Shramana Project",
+  "short_name": "Shramana",
+  "description": "An iPad-only puzzle pilgrimage where one monk reaches the gate.",
+  "start_url": "./index.html",
+  "display": "browser",
+  "background_color": "#090a0d",
+  "theme_color": "#10141a"
+}
