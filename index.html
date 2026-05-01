@@ -31,116 +31,146 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">A puzzle pilgrimage where only one monk reaches the gate.</h1>
+      <section class="hero home-hero" aria-labelledby="hero-title">
+        <div class="hero-atmosphere" aria-hidden="true">
+          <img src="assets/art/bg_cosmic_layer0.png" alt="">
+          <img src="assets/art/bg_grassland_layer0.png" alt="">
+        </div>
+        <div class="hero-copy" data-reveal>
+          <p class="hero-signal">iPad-only puzzle ritual</p>
+          <h1 id="hero-title"><span>One gate.</span><span>Twenty koans.</span><span>A hundred tiny disasters.</span></h1>
           <p>
-            Shramana Project is an iPad-only SpriteKit and SwiftUI puzzle game inspired by classic
-            sacrifice-routing design. Monks walk, wander, pray, levitate, chant, teleport, and give
-            themselves up so a single survivor can pass through the Nirvana Gate.
+            Shramana Project turns classic sacrifice-routing into a meditative arcade ritual:
+            assign scarce monk abilities, let most of the crowd go, and deliver one survivor to
+            the Nirvana Gate.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#campaign">See the campaign</a>
-            <a class="button secondary" href="support.html">Get release updates</a>
+            <a class="button primary" href="#campaign">Enter the campaign</a>
+            <a class="button secondary" href="#abilities">Study the abilities</a>
           </div>
           <dl class="proof-strip" aria-label="Game facts">
             <div><dt>20</dt><dd>koan levels</dd></div>
-            <div><dt>iPad</dt><dd>landscape only</dd></div>
-            <div><dt>10</dt><dd>playable abilities</dd></div>
+            <div><dt>4</dt><dd>chapter arcs</dd></div>
+            <div><dt>1</dt><dd>monk must pass</dd></div>
           </dl>
         </div>
-        <div class="hero-stage" aria-label="Shramana Project gameplay art">
+        <div class="hero-stage temple-stage" aria-label="Shramana Project gameplay art" data-reveal>
+          <div class="stage-glow" aria-hidden="true"></div>
           <img class="hero-screen" src="assets/screenshots/level-20.png" alt="Cosmic endgame level screenshot from Shramana Project">
           <img class="hero-monk monk-one" src="assets/monks/monk_static_east.png" alt="">
           <img class="hero-monk monk-two" src="assets/monks/levitate_0.png" alt="">
           <img class="hero-monk monk-three" src="assets/monks/astralMove_0.png" alt="">
           <img class="hero-object gate" src="assets/art/obj_exitGate_active.png" alt="">
+          <div class="koan-ticket" aria-label="Core rule">
+            <span>Rule of the gate</span>
+            <strong>Save one. Understand why the others had to go.</strong>
+          </div>
         </div>
       </section>
 
-      <section class="section split" id="campaign" aria-labelledby="campaign-title">
+      <section class="monk-marquee" aria-label="Monk action strip">
         <div>
+          <img src="assets/monks/monk_static_east.png" alt="">
+          <span>walk</span>
+          <img src="assets/monks/meditateHold_0.png" alt="">
+          <span>meditate</span>
+          <img src="assets/monks/prayLoop_0.png" alt="">
+          <span>pray</span>
+          <img src="assets/monks/teleportIn_0.png" alt="">
+          <span>teleport</span>
+          <img src="assets/monks/kungFu_3.png" alt="">
+          <span>break</span>
+          <img src="assets/monks/astralMove_0.png" alt="">
+          <span>become almost nothing</span>
+        </div>
+      </section>
+
+      <section class="section chapter-runway" id="campaign" aria-labelledby="campaign-title">
+        <div class="section-heading" data-reveal>
           <p class="section-kicker">Four chapters, one impossible exit</p>
-          <h2 id="campaign-title">Every puzzle is a small teaching with teeth.</h2>
+          <h2 id="campaign-title">Every chapter teaches a new way to lose beautifully.</h2>
           <p>
-            The campaign moves from forest foothills through temple courtyards, bamboo mountains,
-            mirror caves, rooftops, and a cosmic dreamscape. Each level opens with a koan, then turns
-            that idea into a tactical routing problem.
+            Forest foothills, temple courtyards, bamboo mountains, caves, rooftops, and cosmic
+            dreamscapes each bend the same rule: there is a crowd, a gate, and never enough tokens.
           </p>
         </div>
-        <div class="chapter-stack" aria-label="Campaign chapters">
-          <article>
-            <span>Chapter I</span>
-            <h3>The Barrier of Mu</h3>
-            <p>Beginnings, meditation blockers, prayer bridges, levitation, and first sacrifices.</p>
-          </article>
-          <article>
-            <span>Chapter II</span>
-            <h3>Compassionate Action</h3>
-            <p>Kung fu barriers, fox-switch karma, moving platforms, and lantern routes.</p>
-          </article>
-          <article>
-            <span>Chapter III</span>
-            <h3>Illusion of Self</h3>
-            <p>Invisible platforms, mirrors, pressure plates, and astral switch work.</p>
-          </article>
-          <article>
-            <span>Chapter IV</span>
-            <h3>The Gateless Gate</h3>
-            <p>Portals, paradox routes, all-systems convergence, and the quiet epilogue.</p>
-          </article>
+        <div class="chapter-cards" aria-label="Campaign chapters">
+          <article data-reveal><img src="assets/art/bg_grassland_layer0.png" alt=""><span>Chapter I</span><h3>The Barrier of Mu</h3><p>Meditation blockers, prayer bridges, levitation, and the first hard choices.</p></article>
+          <article data-reveal><img src="assets/art/bg_temple_layer0.png" alt=""><span>Chapter II</span><h3>Compassionate Action</h3><p>Kung fu barriers, fox-switch karma, moving platforms, and lantern routes.</p></article>
+          <article data-reveal><img src="assets/art/bg_bamboo_layer0.png" alt=""><span>Chapter III</span><h3>Illusion of Self</h3><p>Invisible paths, mirror logic, pressure plates, and astral switch work.</p></article>
+          <article data-reveal><img src="assets/art/bg_cosmic_layer0.png" alt=""><span>Chapter IV</span><h3>The Gateless Gate</h3><p>Portals, paradox routing, all-systems convergence, and the quiet epilogue.</p></article>
         </div>
       </section>
 
-      <section class="section showcase" aria-labelledby="showcase-title">
-        <div class="section-heading">
+      <section class="section proof-cinema" aria-labelledby="showcase-title">
+        <div class="section-heading" data-reveal>
           <p class="section-kicker">Real build captures</p>
-          <h2 id="showcase-title">Built around touch, timing, and readable chaos.</h2>
+          <h2 id="showcase-title">Not a mockup. The strange little machine is already moving.</h2>
         </div>
-        <div class="screenshot-wall">
-          <figure>
+        <div class="cinema-grid">
+          <figure class="cinema-lead" data-reveal>
             <img src="assets/screenshots/level-1.png" alt="Tutorial level screenshot showing the early forest route">
             <figcaption>Level 1 teaches blockers and prayer bridges without hiding the goal.</figcaption>
           </figure>
-          <figure>
-            <img src="assets/screenshots/level-2.png" alt="Second level screenshot with hazards and early ability timing">
-            <figcaption>Early hazards ask players to spend limited tokens with care.</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/screenshots/level-19.png" alt="Late game screenshot from the all-monks-dead level">
-            <figcaption>Late puzzles bend the goal itself, including an all-monks-die completion.</figcaption>
-          </figure>
+          <div class="cinema-stack">
+            <figure data-reveal>
+              <img src="assets/screenshots/level-2.png" alt="Second level screenshot with hazards and early ability timing">
+              <figcaption>Early hazards ask players to spend limited tokens with care.</figcaption>
+            </figure>
+            <figure data-reveal>
+              <img src="assets/screenshots/level-19.png" alt="Late game screenshot from the all-monks-dead level">
+              <figcaption>Late puzzles bend the goal itself, including an all-monks-die completion.</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section class="section abilities" aria-labelledby="abilities-title">
-        <div class="section-heading">
-          <p class="section-kicker">Ability tokens</p>
-          <h2 id="abilities-title">Small verbs, large consequences.</h2>
+      <section class="section ability-theater" id="abilities" aria-labelledby="abilities-title">
+        <div class="ability-stage" data-reveal>
+          <p class="section-kicker">Ability altar</p>
+          <h2 id="abilities-title">Tap a verb. Watch the doctrine get tactical.</h2>
+          <div class="ability-spotlight" aria-live="polite">
+            <img id="ability-frame" src="assets/monks/meditateHold_0.png" alt="">
+            <div>
+              <span id="ability-label">Meditate</span>
+              <p id="ability-copy">Become a living blocker and redirect the crowd.</p>
+            </div>
+          </div>
         </div>
-        <div class="ability-grid">
-          <article><img src="assets/icons/shr_icon_meditate.png" alt=""><h3>Meditate</h3><p>Become a living blocker and redirect the crowd.</p></article>
-          <article><img src="assets/icons/shr_icon_pray.png" alt=""><h3>Pray</h3><p>Call temporary bridges and hidden platforms into being.</p></article>
-          <article><img src="assets/icons/shr_icon_levitate.png" alt=""><h3>Levitate</h3><p>Survive deadly drops or cross a dangerous gap.</p></article>
-          <article><img src="assets/icons/shr_icon_kungFu.png" alt=""><h3>Kung Fu</h3><p>Break barriers when compassion needs a sharp edge.</p></article>
-          <article><img src="assets/icons/shr_icon_astralProjection.png" alt=""><h3>Astral</h3><p>Leave the body briefly to hit unreachable switches.</p></article>
-          <article><img src="assets/icons/shr_icon_teleport.png" alt=""><h3>Teleport</h3><p>Thread the final chapter through portal sequences.</p></article>
-          <article><img src="assets/icons/shr_icon_stopChanting.png" alt=""><h3>Stop Chanting</h3><p>Freeze timing hazards and moving platforms at the right breath.</p></article>
-          <article><img src="assets/icons/shr_icon_selfSacrifice.png" alt=""><h3>Sacrifice</h3><p>Spend a monk so another can make the final step.</p></article>
+        <div class="ability-controls" aria-label="Ability selector" data-reveal>
+          <button class="ability-chip is-active" type="button" data-label="Meditate" data-copy="Become a living blocker and redirect the crowd." data-frame="assets/monks/meditateHold_0.png"><img src="assets/icons/shr_icon_meditate.png" alt="">Meditate</button>
+          <button class="ability-chip" type="button" data-label="Pray" data-copy="Call temporary bridges and hidden platforms into being." data-frame="assets/monks/prayLoop_0.png"><img src="assets/icons/shr_icon_pray.png" alt="">Pray</button>
+          <button class="ability-chip" type="button" data-label="Levitate" data-copy="Survive deadly drops or cross a dangerous gap." data-frame="assets/monks/levitate_0.png"><img src="assets/icons/shr_icon_levitate.png" alt="">Levitate</button>
+          <button class="ability-chip" type="button" data-label="Kung Fu" data-copy="Break barriers when compassion needs a sharp edge." data-frame="assets/monks/kungFu_3.png"><img src="assets/icons/shr_icon_kungFu.png" alt="">Kung Fu</button>
+          <button class="ability-chip" type="button" data-label="Astral Projection" data-copy="Leave the body briefly to hit unreachable switches." data-frame="assets/monks/astralMove_0.png"><img src="assets/icons/shr_icon_astralProjection.png" alt="">Astral</button>
+          <button class="ability-chip" type="button" data-label="Teleport" data-copy="Thread the final chapter through portal sequences." data-frame="assets/monks/teleportIn_0.png"><img src="assets/icons/shr_icon_teleport.png" alt="">Teleport</button>
+          <button class="ability-chip" type="button" data-label="Stop Chanting" data-copy="Freeze timing hazards and moving platforms at the right breath." data-frame="assets/monks/monk_static_east.png"><img src="assets/icons/shr_icon_stopChanting.png" alt="">Stop</button>
+          <button class="ability-chip" type="button" data-label="Sacrifice" data-copy="Spend a monk so another can make the final step." data-frame="assets/monks/astralMove_0.png"><img src="assets/icons/shr_icon_selfSacrifice.png" alt="">Sacrifice</button>
+        </div>
+      </section>
+
+      <section class="section story-ribbon" aria-labelledby="story-title">
+        <div data-reveal>
+          <p class="section-kicker">Koan-driven structure</p>
+          <h2 id="story-title">The joke is cosmic. The puzzle is exact.</h2>
+        </div>
+        <div class="story-panels">
+          <article data-reveal><strong>Joshu's Dog</strong><p>The first barrier becomes a routing lesson: a blocker is not a wall, it is a question.</p></article>
+          <article data-reveal><strong>Hyakujo's Fox</strong><p>Wrong switches create consequences, because cause and effect are not optional.</p></article>
+          <article data-reveal><strong>The Gateless Gate</strong><p>The final route is a portal sequence, a sacrifice chain, and then the gate breaks open.</p></article>
         </div>
       </section>
 
       <section class="section art-band" aria-labelledby="art-title">
-        <div class="art-copy">
+        <div class="art-copy" data-reveal>
           <p class="section-kicker">PixelLab production art</p>
           <h2 id="art-title">Earthy, side-view, meditative, but still crunchy at puzzle scale.</h2>
           <p>
             The site uses the same generated monk frames, UI icons, parallax backdrops, portals,
-            lanterns, and gate objects that are integrated into the game project. The visual promise
-            and the runtime assets now speak the same language.
+            lanterns, and gate objects that are integrated into the game project.
           </p>
         </div>
-        <div class="art-collage" aria-hidden="true">
+        <div class="art-collage" aria-hidden="true" data-reveal>
           <img src="assets/art/bg_grassland_layer0.png" alt="">
           <img src="assets/art/bg_temple_layer0.png" alt="">
           <img src="assets/art/bg_cosmic_layer0.png" alt="">
@@ -151,7 +181,7 @@
       </section>
 
       <section class="section release-note" aria-labelledby="release-title">
-        <div>
+        <div data-reveal>
           <p class="section-kicker">Release status</p>
           <h2 id="release-title">The app target exists. The public store page is next.</h2>
           <p>
