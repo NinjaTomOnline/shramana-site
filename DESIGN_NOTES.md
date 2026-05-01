@@ -29,6 +29,7 @@
 
 - Rebuilt the home page around a stronger campaign idea: `One gate. Twenty koans. A hundred tiny disasters.`
 - Added a monk action marquee using real PixelLab monk frames.
+- Added a CSS-driven hero gameplay loop using real monk, gate, and background assets with reduced-motion support.
 - Replaced the flatter chapter list with four image-led chapter cards.
 - Reworked the screenshot proof section into a cinematic lead capture plus stacked supporting captures.
 - Added an interactive ability altar that swaps monk frames and copy without inventing new gameplay claims.

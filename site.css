@@ -864,6 +864,7 @@ a {
 .temple-stage .hero-screen {
   right: 4%;
   top: 20px;
+  z-index: 2;
   width: min(78%, 620px);
   transform: rotateY(-13deg) rotateX(3deg) rotateZ(-1deg);
   border: 1px solid rgba(227, 183, 90, 0.36);
@@ -884,25 +885,255 @@ a {
   filter: blur(24px);
 }
 
+.hero-loop {
+  position: absolute;
+  right: 1%;
+  top: 30px;
+  z-index: 6;
+  width: min(52%, 430px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(227, 183, 90, 0.42);
+  background:
+    linear-gradient(to bottom, rgba(9, 10, 13, 0.08), rgba(9, 10, 13, 0.86)),
+    url("assets/art/bg_cosmic_layer0.png") center / cover;
+  box-shadow:
+    0 26px 76px rgba(0, 0, 0, 0.48),
+    inset 0 0 0 1px rgba(255, 247, 232, 0.08);
+  transform: rotate(-2deg);
+}
+
+.hero-loop::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent, rgba(227, 183, 90, 0.16), transparent),
+    repeating-linear-gradient(0deg, rgba(255, 247, 232, 0.04) 0 1px, transparent 1px 5px);
+  mix-blend-mode: screen;
+  opacity: 0.72;
+  animation: scanline 4.8s linear infinite;
+}
+
+.loop-sky {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 74% 28%, rgba(227, 183, 90, 0.34), transparent 24%);
+  animation: loopGlow 5.8s ease-in-out infinite;
+}
+
+.loop-rail {
+  position: absolute;
+  left: 9%;
+  right: 17%;
+  bottom: 22%;
+  height: 20%;
+  border-top: 7px solid rgba(113, 140, 74, 0.95);
+  background: linear-gradient(to bottom, rgba(39, 54, 30, 0.96), rgba(24, 37, 20, 0.85));
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.28);
+}
+
+.loop-rail span {
+  position: absolute;
+  top: -14px;
+  width: 34px;
+  height: 13px;
+  background: repeating-linear-gradient(90deg, rgba(227, 183, 90, 0.8) 0 5px, rgba(113, 140, 74, 0.9) 5px 10px);
+  clip-path: polygon(0 45%, 82% 0, 100% 50%, 82% 100%, 0 55%);
+  animation: railGlyph 2.6s linear infinite;
+}
+
+.loop-rail span:nth-child(1) {
+  left: 9%;
+}
+
+.loop-rail span:nth-child(2) {
+  left: 40%;
+  animation-delay: 0.4s;
+}
+
+.loop-rail span:nth-child(3) {
+  left: 70%;
+  animation-delay: 0.8s;
+}
+
+.loop-monk,
+.loop-gate {
+  position: absolute;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 14px rgba(0, 0, 0, 0.4));
+}
+
+.loop-monk {
+  width: 56px;
+  height: 56px;
+  bottom: 27%;
+}
+
+.walker-a {
+  left: -14%;
+  animation: monkWalkA 7.2s linear infinite;
+}
+
+.walker-b {
+  left: 36%;
+  animation: monkPray 7.2s ease-in-out infinite;
+}
+
+.walker-c {
+  left: 55%;
+  bottom: 42%;
+  opacity: 0;
+  animation: monkLevitate 7.2s ease-in-out infinite;
+}
+
+.loop-gate {
+  right: 5%;
+  bottom: 15%;
+  width: 68px;
+  height: 68px;
+  animation: loopGate 7.2s ease-in-out infinite;
+}
+
+.loop-cue {
+  position: absolute;
+  padding: 6px 8px;
+  border: 1px solid rgba(227, 183, 90, 0.42);
+  background: rgba(9, 10, 13, 0.78);
+  color: var(--gold);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.cue-pray {
+  left: 32%;
+  top: 18%;
+  animation: cuePop 7.2s ease-in-out infinite;
+}
+
+.cue-gate {
+  right: 8%;
+  top: 16%;
+  animation: cuePop 7.2s ease-in-out infinite 2.4s;
+}
+
+@keyframes monkWalkA {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  8%,
+  66% {
+    opacity: 1;
+  }
+  72%,
+  100% {
+    transform: translateX(310px);
+    opacity: 0;
+  }
+}
+
+@keyframes monkPray {
+  0%,
+  20%,
+  78%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  36%,
+  58% {
+    transform: translateY(-6px) scale(1.06);
+    filter: drop-shadow(0 0 18px rgba(227, 183, 90, 0.45));
+  }
+}
+
+@keyframes monkLevitate {
+  0%,
+  30%,
+  74%,
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  42%,
+  64% {
+    opacity: 1;
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes loopGate {
+  0%,
+  42%,
+  100% {
+    filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.44));
+  }
+  58%,
+  76% {
+    filter: drop-shadow(0 0 26px rgba(227, 183, 90, 0.72));
+    transform: translateY(-4px) scale(1.05);
+  }
+}
+
+@keyframes cuePop {
+  0%,
+  22%,
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  8%,
+  16% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scanline {
+  to {
+    transform: translateX(28%);
+  }
+}
+
+@keyframes loopGlow {
+  50% {
+    opacity: 0.46;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes railGlyph {
+  to {
+    transform: translateX(54px);
+  }
+}
+
 .temple-stage .monk-one {
+  z-index: 7;
   right: 62%;
   bottom: 70px;
   width: 170px;
 }
 
 .temple-stage .monk-two {
+  z-index: 7;
   right: 43%;
   bottom: 206px;
   width: 148px;
 }
 
 .temple-stage .monk-three {
+  z-index: 7;
   right: 20%;
   bottom: 96px;
   width: 138px;
 }
 
 .temple-stage .gate {
+  z-index: 7;
   right: 3%;
   bottom: 88px;
   width: 126px;
@@ -911,6 +1142,7 @@ a {
 
 .koan-ticket {
   position: absolute;
+  z-index: 8;
   left: 3%;
   bottom: 6px;
   width: min(360px, 56%);
@@ -1243,6 +1475,11 @@ a {
     animation: none;
   }
 
+  .hero-loop *,
+  .hero-loop::before {
+    animation: none !important;
+  }
+
   [data-reveal] {
     opacity: 1;
     transform: none;
@@ -1303,6 +1540,15 @@ a {
 
   .temple-stage .hero-screen {
     width: min(100%, 360px);
+    transform: none;
+  }
+
+  .hero-loop {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: min(100%, 360px);
+    margin: 0 auto 14px;
     transform: none;
   }
 
